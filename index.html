@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <title>Formulário do Evento</title>
+  <title>Formulário de Evento</title>
 </head>
 <body>
   <div class="page">
@@ -12,13 +12,13 @@
       <h1>Crie e compartilhe seu evento</h1>
       <p>O primeiro passo, é preencher esse <br> formulário de inscrição.</p>
     </header>
-        <form>
+        <form id="my-form">
           <fieldset>
             <div class="fieldset-wrapper">
             <legend>Informações do Evento</legend>
             <div class="input-wrapper">
               <label for="event-title">Título do evento <span>(mínimo 8 caracteres)</span></label> 
-                <input type="text" id="event-title" required>
+                <input type="text" id="event-title" minlength="8" required>
                 </div>
 
                  <div class="input-wrapper">
@@ -35,10 +35,65 @@
               <label for="event-info">Informações extras</label> 
                 <textarea id="event-info"></textarea>
                 </div>
+
+                <div class="input-wrapper">
+              <label for="event-category">Categoria</label> 
+                <select id="event-category">
+                  <option value="live">Ao vivo</option>
+                  <option value="podcast">Podcast</option>
+                  <option value="mentorship">Mentoria</option>
+                </select>
+                </div>
                 
             </fieldset>
+
+            <fieldset>
+            <div class="fieldset-wrapper">
+            <legend>Privacidade</legend>
+            <div class="input-wrapper">
+              <label for="event-email">E-mail do adminsitrador <span>(digite um email válido)</span></label> 
+                <input type="email" id="event-email" required>
+                </div>
+
+                 <div class="input-wrapper">
+              <label for="event-password">Senha de acesso para os participanteso <span>(mínimo 8 caracteres)</span></label> 
+                <input type="password" id="event-password"  minlength="8" required>
+                </div>
+
+                 <div class="checkbox-wrapper">
+                <input type="checkbox" id="event-private">
+                <label for="event-private">Evento privado</label> 
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+            <div class="fieldset-wrapper">
+            <legend>Dia e Hora</legend>
+
+            <div class="three-col">
+            <div class="input-wrapper">
+              <label for="event-date">Data</label> 
+                <input type="date" id="event-date">
+                </div>
+                
+
+                 <div class="input-wrapper">
+              <label for="event-timeBegining">Das</label> 
+                <input type="time" id="event-timeBegining">
+                </div>
+
+                <div class="input-wrapper">
+              <label for="event-timeEnd">Até</label> 
+                <input type="time" id="event-timeEnd">
+                </div>
             </div>
-        </form>
+            </fieldset>
+
+          </form>
+          <footer>
+            <input id="my-form" class="button" type="submit" value="Salvar evento">
+          </footer>
   </div>
 </body>
 </html>
