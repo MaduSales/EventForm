@@ -12,7 +12,6 @@ Projeto de um formulário de eventos criado durante o desafio Explorer FullStack
 ## Tecnologias Usadas:
 - HTML;
 - CSS;
-- JavaScript;
 <br>
 
 
